@@ -1,6 +1,6 @@
 # FarmVitals
 
-FarmVitals is an AI-driven web application designed to assess the health of farm animals and plants by analyzing uploaded images. This application employs machine learning to classify diseases based on animal and plant images.
+FarmVitals is an AI-driven web application that utilizes Convolutional Neural Networks (CNNs) to assess the health of farm animals and plants by analyzing uploaded images for disease detection.
 
 ## Dataset
 
