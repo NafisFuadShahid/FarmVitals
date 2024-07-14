@@ -37,23 +37,22 @@ image_image_3 = PhotoImage(file=relative_to_assets("image_3.png"))
 image_3 = canvas.create_image(262.0, 273.0, image=image_image_3)
 
 # Define custom fonts
-montserratExtraBold_20 = font.Font(family="Montserrat", size=20, weight="bold")
-montserratBold_20_1 = font.Font(family="Montserrat", size=20, weight="bold")
-montserratNormal_18 = font.Font(
+montserratExtraBold_24 = font.Font(family="Montserrat", size=20, weight="bold")
+montserratBold_32 = font.Font(family="Montserrat", size=24, weight="bold")
+montserratNormal_26 = font.Font(
     family="Montserrat", size=18, weight="normal"
 )  # Slightly larger normal font
 
 # Text box for "POTATO LATE BLIGHT DISEASE"
 canvas.create_text(
-    67.0 + 391 / 2,  # Center align text by adjusting x-coordinate
-    476.0 + 95 / 2,  # Center align text by adjusting y-coordinate
-    anchor="center",
+    67.0,
+    476.0,
+    anchor="nw",
     text="POTATO LATE BLIGHT DISEASE",
     fill="#FFFFFF",
-    font=montserratExtraBold_20,
+    font=montserratExtraBold_24,
     width=391,  # Set the width for text wrapping
 )
-
 
 button_image_1 = PhotoImage(file=relative_to_assets("button_1.png"))
 button_1 = Button(
@@ -70,9 +69,9 @@ canvas.create_text(
     544.0,
     110.0,
     anchor="nw",
-    text="STEPS TO FOLLOW: \n\n",
+    text="STEPS TO FOLLOW:",
     fill="#FFFFFF",
-    font=montserratBold_20_1,
+    font=montserratBold_32,
     width=662,  # Set the width for text wrapping
 )
 
@@ -82,7 +81,7 @@ canvas.create_text(
     anchor="nw",
     text="1. SEPARATE THE INFECTED LEAVES\n2. BURN THEM\n3. THEN BURN YOUR FAMILY AND THEN YOURSELF",
     fill="#FFFFFF",
-    font=montserratNormal_18,
+    font=montserratNormal_26,
     width=662,  # Set the width for text wrapping
 )
 

@@ -2,7 +2,7 @@ from pathlib import Path
 
 # from tkinter import *
 # Explicit imports to satisfy Flake8
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, font
 
 
 OUTPUT_PATH = Path(__file__).parent
@@ -33,22 +33,26 @@ canvas.place(x=0, y=0)
 image_image_1 = PhotoImage(file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(643.0, 376.0, image=image_image_1)
 
+montserratExtraBold_30 = font.Font(family="Montserrat", size=30, weight="bold")
+montserratBold_20_1 = font.Font(family="Montserrat", size=20, weight="bold")
+montserratNormal_18 = font.Font(family="Montserrat", size=18, weight="normal")
+
 canvas.create_text(
-    468.0,
-    65.0,
-    anchor="nw",
+    643.5,  # Centered horizontally
+    68.0,
+    anchor="center",
     text="FarmVitals",
     fill="#FFFFFF",
-    font=("MontserratRoman SemiBold", 48 * -1),
+    font=montserratExtraBold_30,
 )
 
 canvas.create_text(
-    54.0,
-    232.0,
+    80.0,
+    240.0,
     anchor="nw",
     text="Choose the corresponding type:",
     fill="#FFFFFF",
-    font=("MontserratRoman SemiBold", 28 * -1),
+    font=montserratNormal_18,
 )
 
 button_image_1 = PhotoImage(file=relative_to_assets("button_1.png"))
