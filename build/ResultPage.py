@@ -12,6 +12,7 @@ def relative_to_assets(path: str) -> Path:
 
 
 window = Tk()
+window.title("FarmVitals")
 
 window.geometry("1287x753")
 window.configure(bg="#FFFFFF")
