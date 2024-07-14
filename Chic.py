@@ -11,7 +11,7 @@ import numpy as np
 import sys
 
 # Load the trained model
-detection = load_model("chicken_disease_model.h5")
+detection = load_model("ChickenDiseaseModel.h5")
 
 # Set up the interface
 text = "Welcome to Chicken Disease Detector"
