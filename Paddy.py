@@ -42,6 +42,8 @@ def predict_disease(img_path):
     return a
 
 
+
+
 while True:
     output = buttonbox(msg=text, title=title, image=img, choices=button_list)
 

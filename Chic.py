@@ -43,6 +43,8 @@ def predict_disease(img_path):
     a = result.argmax()
     return a
 
+
+
 # Main loop for the GUI
 while True:
     output = buttonbox(msg=text, title=title, image=img, choices=button_list)
