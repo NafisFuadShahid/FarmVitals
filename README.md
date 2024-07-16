@@ -8,3 +8,4 @@ The dataset used for training and testing the Leaf Health Checker model [Plant D
 
 The dataset used for training and testing the Chicken Health Checker model [Chicken Disease Dataset on Kaggle](https://www.kaggle.com/datasets/sadmansakibmahi/chicken-diseases-classification-and-treatment/data)
 
+The dataset used for training and testing the Paddy Disease Checker model [Paddy Disease Dataset on Kaggle](https://www.kaggle.com/competitions/paddy-disease-classification/data)
