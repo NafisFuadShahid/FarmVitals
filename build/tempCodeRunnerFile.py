@@ -5,6 +5,7 @@ import subprocess
 # from tkinter import *
 # Explicit imports to satisfy Flake8
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, font
+from tkinter import ttk
 
 
 OUTPUT_PATH = Path(__file__).parent
@@ -24,17 +25,20 @@ window.configure(bg="#FFFFFF")
 
 def open_leaf_page():
     leaf_page_path = Path(__file__).parent / "LeafPage.py"
-    subprocess.run(["python", str(leaf_page_path)], check=True)
+    subprocess.Popen(["python", str(leaf_page_path)])
+    window.destroy()
 
 
 def open_chicken_page():
     chicken_page_path = Path(__file__).parent / "ChickenPage.py"
-    subprocess.run(["python", str(chicken_page_path)], check=True)
+    subprocess.Popen(["python", str(chicken_page_path)])
+    window.destroy()
 
 
 def open_paddy_page():
     paddy_page_path = Path(__file__).parent / "PaddyPage.py"
-    subprocess.run(["python", str(paddy_page_path)], check=True)
+    subprocess.Popen(["python", str(paddy_page_path)])
+    window.destroy()
 
 
 canvas = Canvas(

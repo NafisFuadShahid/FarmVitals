@@ -1,0 +1,2 @@
+Detected Disease: Potato healthy
+Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Potato___healthy/5ea316eb-10a2-42c0-b781-40d90356ccaa___RS_HL 1935.JPG
