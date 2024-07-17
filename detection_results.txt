@@ -1,2 +1,2 @@
-Detected Disease: New Castle Disease
-Image Path: D:/Leaf-Health-Checker/chic dataset/Train/New Castle Disease/ncd.368.jpg
+Detected Disease: brown spot
+Image Path: D:/Leaf-Health-Checker/paddyData/train_images/hispa/107004.jpg
