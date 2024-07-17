@@ -1,22 +1,18 @@
 import os
-
 import re  # Import the regular expressions module
-
-
-# Set the environment variable to disable oneDNN custom operations
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
-
-from easygui import *
+import threading
+import subprocess
+from pathlib import Path
+from tkinter import Tk, Canvas, Button, PhotoImage, filedialog, messagebox
+from PIL import Image, ImageTk  # Import PIL for image processing
 from tensorflow import keras
 from keras._tf_keras.keras.models import load_model
 from keras._tf_keras.keras.preprocessing import image
 from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
-import sys
-from pathlib import Path
-from tkinter import Tk, Canvas, Button, PhotoImage, filedialog, messagebox
-import subprocess
-import threading
+
+# Set the environment variable to disable oneDNN custom operations
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 # Initialize model variable
 detection = None
@@ -90,10 +86,26 @@ def select_photo():
             file.write(f"Detected Disease: {output_category}\n")
             file.write(f"Image Path: {path}")
 
-        # messagebox.showinfo("Result", f"The detected class is: {output_category}")
+        # Replace the image of select_button with proceed.png
+        new_button_image = PhotoImage(file=relative_to_assets("proceed.png"))
+        select_button.config(image=new_button_image)
+        select_button.image = (
+            new_button_image  # Keep a reference to prevent garbage collection
+        )
 
-        # Transition to ResultPage.py after showing the result
-        open_result_page()
+        # Replace image_2 with the selected image
+        selected_image = Image.open(path)
+        selected_image = selected_image.resize(
+            (300, 300), Image.LANCZOS
+        )  # Adjust size as needed
+        selected_image_tk = ImageTk.PhotoImage(selected_image)
+        canvas.itemconfig(image_2, image=selected_image_tk)
+        canvas.image_2 = (
+            selected_image_tk  # Keep a reference to prevent garbage collection
+        )
+
+        # Update the command of the select_button to navigate to the result page
+        select_button.config(command=open_result_page)
     else:
         messagebox.showerror(
             "Error", "No file selected. Please select a file to proceed."
@@ -151,7 +163,6 @@ select_button = Button(
     relief="flat",
 )
 select_button.place(x=679.0, y=543.0, width=231.0, height=65.0)
-
 
 window.resizable(False, False)
 window.mainloop()

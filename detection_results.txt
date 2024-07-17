@@ -1,2 +1,2 @@
-Detected Disease: Tomato Tomato YellowLeaf Curl Virus
-Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Tomato__Tomato_YellowLeaf__Curl_Virus/00b41556-fe22-41fb-93aa-76b0c45d923a___UF.GRC_YLCV_Lab 02644.JPG
+Detected Disease: Tomato Tomato mosaic virus
+Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Tomato__Tomato_mosaic_virus/6c3a09c7-04b2-4c0d-bbe0-bf55ea2e5472___PSU_CG 2195.JPG
