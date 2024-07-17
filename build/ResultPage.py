@@ -2,6 +2,7 @@ from pathlib import Path
 from tkinter import Tk, Canvas, Button, PhotoImage, font, Label
 from PIL import Image, ImageTk, ImageOps, ImageDraw
 import os
+import subprocess
 
 # Explicit imports to satisfy Flake8
 OUTPUT_PATH = Path(__file__).parent
@@ -47,6 +48,12 @@ def resize_image_with_border(
     )
 
     return border_image
+
+
+def open_home_page():
+    home_page_path = Path(__file__).parent / "HomePage.py"
+    subprocess.Popen(["python", str(home_page_path)])  # Start HomePage.py
+    window.destroy()
 
 
 window = Tk()
@@ -103,7 +110,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=open_home_page,
     relief="flat",
 )
 button_1.place(x=142.0, y=596.0, width=243.0, height=49.0)
