@@ -77,7 +77,7 @@ button_2 = Button(
     relief="flat"
 )
 button_2.place(
-    x=679.0,
+    x=675.0,
     y=543.0,
     width=231.0,
     height=65.0

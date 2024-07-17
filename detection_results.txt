@@ -1,2 +1,2 @@
-Detected Disease: Tomato Bacterial spot
-Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Tomato_Bacterial_spot/2b011bd3-107c-4a83-b961-eb7131d2a76a___UF.GRC_BS_Lab Leaf 0281.JPG
+Detected Disease: New Castle Disease
+Image Path: D:/Leaf-Health-Checker/chic dataset/Train/New Castle Disease/ncd.368.jpg

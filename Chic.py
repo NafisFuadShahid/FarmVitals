@@ -31,8 +31,9 @@ train_generator = datagen_train.flow_from_directory(
     target_size=(img_size, img_size),
     batch_size=batch_size,
     class_mode="categorical",
-    shuffle=True
+    shuffle=True,
 )
+
 
 # Function to predict the disease from an image
 def predict_disease(img_path):
@@ -42,7 +43,6 @@ def predict_disease(img_path):
     result = detection.predict(test_img)
     a = result.argmax()
     return a
-
 
 
 # Main loop for the GUI
