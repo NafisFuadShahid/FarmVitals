@@ -1,14 +1,52 @@
 from pathlib import Path
+from tkinter import Tk, Canvas, Button, PhotoImage, font, Label
+from PIL import Image, ImageTk, ImageOps, ImageDraw
+import os
 
 # Explicit imports to satisfy Flake8
-from tkinter import Tk, Canvas, Button, PhotoImage, font
-
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r".\assets\frame4")
 
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
+
+
+# Adjust the path to point to the parent directory
+parent_directory = OUTPUT_PATH.parent
+detection_results_path = parent_directory / "detection_results.txt"
+
+
+def load_detection_results(filepath: str):
+    with open(filepath, "r") as file:
+        lines = file.readlines()
+        detected_disease = lines[0].strip().split(": ")[1]
+        image_path = lines[1].strip().split(": ")[1]
+    return detected_disease, image_path
+
+
+# Load detection results
+detected_disease, image_path = load_detection_results(detection_results_path)
+
+
+def resize_image_with_border(
+    image_path,
+    size=(329, 329),
+    border_width=2,
+    border_color="white",  # Decreased border width
+):
+    # Load original image
+    original_image = Image.open(image_path)
+
+    # Resize the image
+    resized_image = original_image.resize(size, Image.LANCZOS)
+
+    # Create a border
+    border_image = ImageOps.expand(
+        resized_image, border=border_width, fill=border_color
+    )
+
+    return border_image
 
 
 window = Tk()
@@ -34,8 +72,13 @@ image_1 = canvas.create_image(643.0, 376.0, image=image_image_1)
 image_image_2 = PhotoImage(file=relative_to_assets("image_2.png"))
 image_2 = canvas.create_image(861.0, 380.0, image=image_image_2)
 
-image_image_3 = PhotoImage(file=relative_to_assets("image_3.png"))
-image_3 = canvas.create_image(262.0, 273.0, image=image_image_3)
+# Resize image with border only
+pil_image_3 = resize_image_with_border(
+    image_path, size=(329, 329), border_width=2
+)  # Decreased border width
+image_image_3 = ImageTk.PhotoImage(pil_image_3)
+image_label_3 = Label(window, image=image_image_3)
+image_label_3.place(x=98, y=109)
 
 # Define custom fonts
 montserratExtraBold_20 = font.Font(family="Montserrat", size=20, weight="bold")
@@ -44,17 +87,16 @@ montserratNormal_18 = font.Font(
     family="Montserrat", size=18, weight="normal"
 )  # Slightly larger normal font
 
-# Text box for "POTATO LATE BLIGHT DISEASE"
+# Text box for the detected disease
 canvas.create_text(
     67.0 + 391 / 2,  # Center align text by adjusting x-coordinate
     476.0 + 95 / 2,  # Center align text by adjusting y-coordinate
     anchor="center",
-    text="POTATO LATE BLIGHT DISEASE",
+    text=detected_disease.upper() + " DISEASE",
     fill="#FFFFFF",
     font=montserratExtraBold_20,
     width=391,  # Set the width for text wrapping
 )
-
 
 button_image_1 = PhotoImage(file=relative_to_assets("button_1.png"))
 button_1 = Button(

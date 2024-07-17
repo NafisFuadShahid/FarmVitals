@@ -1,2 +1,2 @@
-Detected Disease: Potato healthy
-Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Potato___healthy/5ea316eb-10a2-42c0-b781-40d90356ccaa___RS_HL 1935.JPG
+Detected Disease: Tomato Tomato YellowLeaf Curl Virus
+Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Tomato__Tomato_YellowLeaf__Curl_Virus/00b41556-fe22-41fb-93aa-76b0c45d923a___UF.GRC_YLCV_Lab 02644.JPG
