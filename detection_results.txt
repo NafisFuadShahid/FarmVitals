@@ -1,2 +1,2 @@
-Detected Disease: Tomato Late blight
-Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Tomato_Late_blight/2ccd5383-74a3-41d5-9483-110a20ebf247___RS_Late.B 5329.JPG
+Detected Disease: Tomato Bacterial spot
+Image Path: D:/Leaf-Health-Checker/My Drive/train_set/Tomato_Bacterial_spot/2b011bd3-107c-4a83-b961-eb7131d2a76a___UF.GRC_BS_Lab Leaf 0281.JPG

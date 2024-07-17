@@ -1,8 +1,9 @@
+import os
+import sqlite3
+import subprocess
 from pathlib import Path
 from tkinter import Tk, Canvas, Button, PhotoImage, font, Label
-from PIL import Image, ImageTk, ImageOps, ImageDraw
-import os
-import subprocess
+from PIL import Image, ImageTk, ImageOps
 
 # Explicit imports to satisfy Flake8
 OUTPUT_PATH = Path(__file__).parent
@@ -16,6 +17,7 @@ def relative_to_assets(path: str) -> Path:
 # Adjust the path to point to the parent directory
 parent_directory = OUTPUT_PATH.parent
 detection_results_path = parent_directory / "detection_results.txt"
+db_path = parent_directory / "disease_remedy.db"
 
 
 def load_detection_results(filepath: str):
@@ -30,11 +32,24 @@ def load_detection_results(filepath: str):
 detected_disease, image_path = load_detection_results(detection_results_path)
 
 
+def fetch_remedy_steps(db_path: str, disease_name: str) -> str:
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    cursor.execute("SELECT steps FROM remedy WHERE name = ?", (disease_name,))
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result else "No remedy steps found."
+
+
+# Fetch remedy steps
+remedy_steps = fetch_remedy_steps(db_path, detected_disease)
+
+
 def resize_image_with_border(
     image_path,
     size=(329, 329),
     border_width=2,
-    border_color="white",  # Decreased border width
+    border_color="white",
 ):
     # Load original image
     original_image = Image.open(image_path)
@@ -58,7 +73,6 @@ def open_home_page():
 
 window = Tk()
 window.title("FarmVitals")
-
 window.geometry("1287x753")
 window.configure(bg="#FFFFFF")
 
@@ -80,9 +94,7 @@ image_image_2 = PhotoImage(file=relative_to_assets("image_2.png"))
 image_2 = canvas.create_image(861.0, 380.0, image=image_image_2)
 
 # Resize image with border only
-pil_image_3 = resize_image_with_border(
-    image_path, size=(329, 329), border_width=2
-)  # Decreased border width
+pil_image_3 = resize_image_with_border(image_path, size=(329, 329), border_width=2)
 image_image_3 = ImageTk.PhotoImage(pil_image_3)
 image_label_3 = Label(window, image=image_image_3)
 image_label_3.place(x=98, y=109)
@@ -130,7 +142,7 @@ canvas.create_text(
     544.0,
     160.0,  # Adjusted position to start below "STEPS TO FOLLOW:"
     anchor="nw",
-    text="1. SEPARATE THE INFECTED LEAVES\n2. BURN THEM\n3. THEN BURN YOUR FAMILY AND THEN YOURSELF",
+    text=remedy_steps.replace("\\n", "\n"),
     fill="#FFFFFF",
     font=montserratNormal_18,
     width=662,  # Set the width for text wrapping
