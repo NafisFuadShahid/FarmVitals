@@ -46,7 +46,7 @@ def predict_disease(img_path):
 
 # Tkinter UI setup
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r".\assets\frame2")
+ASSETS_PATH = OUTPUT_PATH / Path(r"./assets/frame2")
 
 
 def open_home_page():

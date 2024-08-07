@@ -1,2 +1,2 @@
 Detected Disease: brown spot
-Image Path: D:/Leaf-Health-Checker/paddyData/train_images/hispa/107004.jpg
+Image Path: /home/shadab/Desktop/Github Repos/FarmVitals/paddyData/train_images/brown_spot/100208.jpg
