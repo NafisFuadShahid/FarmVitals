@@ -1,2 +1,2 @@
-Detected Disease: brown spot
-Image Path: /home/shadab/Desktop/Github Repos/FarmVitals/paddyData/train_images/brown_spot/100208.jpg
+Detected Disease: New Castle Disease
+Image Path: D:/Leaf-Health-Checker/chic dataset/Train/New Castle Disease/ncd.28.jpg
