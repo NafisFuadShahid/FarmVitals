@@ -1,2 +1,0 @@
-Detected Disease: New Castle Disease
-Image Path: D:/Leaf-Health-Checker/chic dataset/Train/New Castle Disease/ncd.28.jpg
