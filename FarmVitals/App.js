@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={{ fontFamily: "Jost" }}>Welcome to FarmVitals</Text>
+      <Text style={{ fontFamily: "Jost Regular" }}>Welcome to FarmVitals</Text>
       <StatusBar style="auto" />
     </View>
   );
