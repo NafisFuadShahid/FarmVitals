@@ -21,7 +21,7 @@ FarmVitals is an AI-driven application that utilizes Convolutional Neural Networ
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/FarmVitals.git
+    git clone https://github.com/NafisFuadShahid/FarmVitals.git
     cd FarmVitals
     ```
 
