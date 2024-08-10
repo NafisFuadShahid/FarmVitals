@@ -1,4 +1,4 @@
-## FarmVitals
+# ![FarmVitals Logo](https://github.com/user-attachments/assets/652827ac-ed7f-4f6d-9ec4-3433669dd5ab) FarmVitals
 
 FarmVitals is an AI-driven application that utilizes Convolutional Neural Networks (CNNs) to assess the health of farm animals and plants by analyzing uploaded images for disease detection.
 
@@ -46,7 +46,3 @@ FarmVitals is an AI-driven application that utilizes Convolutional Neural Networ
 ![Screenshot from 2024-08-04 23-23-11](https://github.com/user-attachments/assets/90bc7061-0b1a-452d-8509-37eaad371554)
 ![Screenshot from 2024-08-04 23-23-29](https://github.com/user-attachments/assets/12dd8429-d62a-4f52-8b3c-08081534343a)
 ![Screenshot from 2024-08-04 23-23-49](https://github.com/user-attachments/assets/539539cb-25b4-4f28-a867-1d73f63fa713)
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any changes.
