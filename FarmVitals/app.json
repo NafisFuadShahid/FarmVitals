@@ -27,7 +27,12 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/Jost-VariableFont_wght.ttf"]
+          "fonts": [
+            "./assets/fonts/Jost-VariableFont_wght.ttf",
+            "./assets/fonts/Poppins-Regular.ttf",
+            "./assets/fonts/Poppins-SemiBold.ttf",
+            "./assets/fonts/Poppins-Medium.ttf"
+          ]
         }
       ]
     ]

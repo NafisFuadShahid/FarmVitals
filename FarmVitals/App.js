@@ -21,15 +21,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   welcomeText: {
-    fontFamily: "Jost",
+    fontFamily: "Poppins",
   },
   welcomeToText: {
-    color: "#006666",
+    color: "#4AAF54",
     fontWeight: "500",
     fontSize: 21,
   },
   farmVitalsText: {
-    color: "#004c4c",
+    color: "#4AAF54",
     fontWeight: "800",
     fontSize: 26,
   },
