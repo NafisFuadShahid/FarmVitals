@@ -1,0 +1,3 @@
+Main Background: #121212
+Secondary Background: #1a1a1a
+Green Main: #4AAF54
