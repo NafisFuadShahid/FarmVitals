@@ -26,8 +26,8 @@ FarmVitals is an AI-driven application that utilizes Convolutional Neural Networ
 ![Screenshot from 2024-08-04 23-23-29](https://github.com/user-attachments/assets/12dd8429-d62a-4f52-8b3c-08081534343a)
 ![Screenshot from 2024-08-04 23-23-49](https://github.com/user-attachments/assets/539539cb-25b4-4f28-a867-1d73f63fa713)
 
-##Video
-You can also check out the video [here](https://youtu.be/eQQ4Nnw5f8E?si=3cL2EvRIuT2UN0JF)
+## Video
+You can also check out the video demo [here](https://youtu.be/eQQ4Nnw5f8E?si=3cL2EvRIuT2UN0JF)
 
 
 ## Installation
